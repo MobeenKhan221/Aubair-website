@@ -1,0 +1,191 @@
+.augmention-service {
+  padding: 38px 120px;
+  width: 100%;
+  height: 600px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 100px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.circle-images-main {
+  width: 50%;
+}
+
+.slider-image-2 {
+  width: 50%;
+}
+.button-img-div {
+  width: 130px;
+  height: 130px;
+  border-radius: 100px;
+  border: 3px solid #29292b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.augmention-service .service-tabs {
+  position: relative;
+  list-style: none;
+}
+
+.augmention-service .nav-tabs .nav-link.active {
+  background-color: transparent;
+  border: none;
+  color: #f37440;
+}
+
+.augmention-service .nav-tabs {
+  position: absolute;
+  border-bottom: none;
+  top: 90%;
+  left: 15%;
+}
+
+.augmention-service .service-img {
+  padding: 10px;
+}
+
+.augmention-service .service-img img {
+  height: 450px;
+  object-fit: contain;
+}
+
+.augmention-service .nav-tabs .item-1 {
+  transform: rotate(0deg) translate(12em) rotate(0deg);
+}
+
+.augmention-service .nav-tabs .item-2 {
+  transform: rotate(40deg) translate(12em) rotate(-40deg);
+}
+
+.augmention-service .nav-tabs .item-3 {
+  transform: rotate(80deg) translate(12em) rotate(-80deg);
+}
+
+.augmention-service .nav-tabs .item-4 {
+  transform: rotate(120deg) translate(12em) rotate(-120deg);
+}
+
+.augmention-service .nav-tabs .item-5 {
+  transform: rotate(160deg) translate(12em) rotate(-160deg);
+}
+
+.augmention-service .nav-tabs .item-6 {
+  transform: rotate(200deg) translate(12em) rotate(-200deg);
+}
+
+.augmention-service .nav-tabs .item-7 {
+  transform: rotate(240deg) translate(12em) rotate(-240deg);
+}
+
+.augmention-service .nav-tabs .item-8 {
+  transform: rotate(280deg) translate(12em) rotate(-280deg);
+}
+
+.augmention-service .nav-tabs .item-9 {
+  transform: rotate(320deg) translate(12em) rotate(-320deg);
+}
+
+.augmention-service .nav-tabs .nav-item {
+  position: absolute;
+  transition: ease all 1s;
+  width: 145px;
+  display: flex;
+  gap: 30px;
+}
+
+.augmention-service .nav-tabs .nav-link.active svg {
+  fill: #f37440;
+}
+
+.augmention-service .nav-tabs .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  color: #394951;
+  border: none;
+  background-color: transparent;
+}
+
+.augmention-service .nav-tabs .nav-link svg {
+  fill: #394951;
+}
+
+.augmention-service .nav-tabs .nav-item:hover .nav-link {
+  color: #f37440;
+}
+
+.augmention-service .nav-tabs .nav-item:hover .nav-link svg {
+  fill: #f37440;
+}
+
+.augmention-modal .modal-content {
+  border-radius: 15px;
+}
+
+.augmention-modal .modal-header {
+  border-bottom: none;
+  padding: 0.5rem 1rem;
+}
+
+.augmention-modal .modal-form h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.augmention-modal .modal-form input {
+  background-color: #ffffff;
+  border-left: none;
+}
+
+.augmention-modal .modal-btn li a {
+  color: #ff5300;
+  font-size: 15px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  border: 1px solid;
+  background-color: #ff530022;
+  font-weight: 600;
+}
+
+.augmention-modal .modal-btn li a svg {
+  padding-bottom: 3px;
+  fill: #ff5300;
+}
+
+.augmention-modal .btn-orange {
+  box-shadow: 4px 5px 15px 0px #ff530066;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 8px;
+  padding: 10px 10px;
+  background-color: #ff5300;
+  color: #ffffff;
+}
+
+.augmention-modal .modal-chat video {
+  width: 100%;
+  height: 450px;
+}
+
+.augmention-modal .modal-img img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  background: white;
+}

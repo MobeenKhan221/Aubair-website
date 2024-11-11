@@ -1,0 +1,37 @@
+.header-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 38px 120px;
+  /* background-color: red; */
+}
+.header-inner {
+  /* background-color: green; */
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.Main-logo {
+  display: flex;
+  align-items: center;
+}
+.tags-items {
+  display: flex;
+  gap: 44px;
+  align-items: center;
+}
+.tags-items .tags {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+.drop-tags {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

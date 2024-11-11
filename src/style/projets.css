@@ -1,0 +1,45 @@
+.projects-main {
+  width: 100%;
+  padding: 38px 120px;
+}
+.projects-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.projects-inner h1 {
+  font-size: 84px;
+  font-family: "Syne";
+  font-weight: 700;
+  line-height: 75.6px;
+  letter-spacing: -1px;
+  color: #000000;
+}
+.projects-all {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.project-image-section {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.project-image-section.reverse {
+  flex-direction: row-reverse;
+}
+.projects-text p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.38px;
+  letter-spacing: -1px;
+  color: #000000;
+}
+.image-div {
+  width: 50%;
+}
+.image-div Image {
+  width: 100%;
+}

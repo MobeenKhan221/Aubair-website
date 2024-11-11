@@ -1,0 +1,182 @@
+.home-main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 100px 120px 38px 120px;
+
+  /* background-color: red; */
+}
+.home-inner {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  /* background-color: green; */
+  gap: 44px;
+}
+.inner-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  gap: 44px;
+}
+.home-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.home-text h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 92px;
+  line-height: 82.8px;
+  letter-spacing: -4%;
+  color: #29292b;
+}
+.home-text h2 span {
+  font-size: 128px;
+  line-height: 115.2px;
+  letter-spacing: -4;
+  background: linear-gradient(94.72deg, #8e2de2 15.41%, #4a00e0 49.37%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.home-text p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #29292b;
+  width: 80%;
+}
+
+/* Video section */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video fills the container */
+  z-index: -1; /* Keeps the video in the background */
+  background-color: gray;
+  border-radius: 24px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1; /* Content on top of the video */
+}
+
+.inner-2 {
+  /* background-color: aqua; */
+  width: 100%;
+}
+.upwork-profile {
+  display: flex;
+  gap: 80px;
+}
+.upwork-image-box {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+.profile-sec {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.profile-name {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+}
+.Visit-profile {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.Visit-profile:hover {
+  text-decoration: underline;
+}
+.btn-div {
+  display: flex;
+  gap: 36px;
+}
+
+.Btn-1 {
+  /* width: 266px; */
+  height: 64px;
+  padding: 20px 82px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: "Montserrat";
+  background-color: #8e2de2;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Btn-2 {
+  /* width: 283px; */
+  height: 64px;
+  background-color: #fff;
+  border: 3px solid #8e2de2;
+  color: #8e2de2;
+  padding: 20px 75px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counting-sec {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.profjetcs-calcualtion {
+  display: flex;
+  flex-direction: column;
+}
+.profjetcs-calcualtion .projects {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: #000000;
+}
+.profjetcs-calcualtion .projects-name {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}

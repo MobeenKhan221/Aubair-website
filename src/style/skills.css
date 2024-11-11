@@ -1,0 +1,108 @@
+.SKills-main {
+  width: 100%;
+  overflow: hidden; /* Keeps slides within container */
+  padding: 44px 0px;
+}
+
+.skills-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  gap: 44px;
+}
+.slide-text {
+  width: 100%;
+  padding: 30px 120px;
+}
+.slide-text h1 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 84px;
+  line-height: 75.6px;
+  letter-spacing: -4%;
+  color: #000000;
+}
+.slide-slider-main {
+  display: flex;
+  height: 93px;
+  width: 100%;
+  background-color: #d9d9d9;
+}
+.skill-slide-main {
+  display: flex;
+  gap: 24px;
+  height: 93px;
+  width: 100%;
+  animation: scroll 30s linear infinite; /* Continuous scroll animation */
+}
+
+.skill-slide {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  /* width: 10%; */
+  flex-shrink: 0;
+}
+
+.skill-slide p {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 28.8px;
+  letter-spacing: -4%;
+  color: #29292b;
+}
+
+/* Keyframes for infinite horizontal scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* industry style */
+.industry-grid {
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+}
+.industry-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  gap: 44px;
+  padding: 0 120px;
+}
+.industry-data {
+  width: 327px;
+  height: 100px;
+  border-radius: 60px;
+  border: 2px solid #29292b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.industry-data p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 32.4px;
+  letter-spacing: -1px;
+  color: #29292b;
+}
+.industry-button {
+  background-color: green;
+}
+.industry .industry-text h1 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 84px;
+  line-height: 75.6px;
+  letter-spacing: -4%;
+  color: #000000;
+}

@@ -11,7 +11,15 @@ import GENAI from "@/assets/gen-ai.webp";
 import DIGITALMarketing from "@/assets/digital-marketing.webp";
 import CloudIntegration from "@/assets/cloud-integration.webp";
 import BusinessInteligence from "@/assets/business-intelligence.webp";
-import TaskImage from "@/assets/Task.png";
+
+import APIimg from "@/assets/Api.svg";
+import Cloudimg from "@/assets/cloud-integration-img.svg";
+import Database from "@/assets/Database.svg";
+import Webimg from "@/assets/webimg.svg";
+import DevicePlain from "@/assets/devicon-plain_fastapi-wordmark.svg";
+import Mobileimg from "@/assets/mobile-application-img.svg";
+import Taskimg from "@/assets/Task.svg";
+import UIimg from "@/assets/Ui.svg";
 
 const ServiceSection = () => {
   const [activeTab, setActiveTab] = useState("first-tabination");
@@ -21,76 +29,74 @@ const ServiceSection = () => {
       id: "first-tabination",
       name: "Web Application",
       image: WebApplication,
+      imgSrc: APIimg,
     },
     {
       id: "second-tabination",
       name: "Mobile Application",
       image: MobileApplication,
+      imgSrc: Cloudimg,
     },
     {
       id: "third-tabination",
       name: "Cloud Integration",
       image: CloudIntegration,
+      imgSrc: Database,
     },
-    { id: "fourth-tabination", name: "RPA", image: RPAImage },
+    { id: "fourth-tabination", name: "RPA", image: RPAImage, imgSrc: Webimg },
     {
       id: "five-tabination",
       name: "Machine Learning",
       image: MachineLearning,
+      imgSrc: DevicePlain,
     },
     {
       id: "six-tabination",
       name: "Digital Marketing",
       image: DIGITALMarketing,
+      imgSrc: Mobileimg,
     },
-    { id: "seventh-tabination", name: "Gen AI", image: GENAI },
+    { id: "seventh-tabination", name: "Gen AI", image: GENAI, imgSrc: Taskimg },
     {
       id: "eighth-tabination",
       name: "Business Intelligence",
       image: BusinessInteligence,
-    },
-    {
-      id: "ninth-tabination",
-      name: "User Interface",
-      image: UserInterface,
+      imgSrc: UIimg,
     },
   ];
 
   return (
     <section className="augmention-service" id="service">
       <div className="container">
-        <div className="row justify-content-center">
-          <h2 className="text-center">Our Services</h2>
+        <div className="slide-text-1">
+          <h1>Our Services</h1>
         </div>
 
-        <div className="row">
-          {/* Circular Tab Navigation */}
-          <div className="circle-images-main">
-            <ul className="nav-tabs service-tabs" role="tablist">
+        <div className="Slider-and-images-main-div">
+          <div className="main">
+            <div className="big-circle">
               {services.map((service, index) => (
-                <li
+                <div
                   key={index}
-                  className={`nav-item item-${index + 1}`}
-                  role="presentation"
+                  className={`icon-block item-${index + 1}`}
+                  onClick={() => setActiveTab(service.id)}
                 >
                   <button
                     className={`nav-link ${
                       activeTab === service.id ? "active" : ""
                     }`}
                     type="button"
-                    onClick={() => setActiveTab(service.id)}
                   >
-                    {service.name}
-                    <div className="button-img-div">
-                      <Image src={TaskImage} alt="Task iamge" />
+                    <div className="btn-inner-img-div">
+                      <Image src={service.imgSrc} alt="Task image" />
                     </div>
+                    <p>{service.name}</p>
                   </button>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Tab Content */}
           <div className="slider-image-2">
             <div className="tab-content">
               {services.map((service, index) => (
@@ -101,7 +107,6 @@ const ServiceSection = () => {
                   }`}
                   id={service.id}
                 >
-                  {/* Display the image only for the active tab */}
                   {activeTab === service.id && (
                     <div className="service-img">
                       <Image

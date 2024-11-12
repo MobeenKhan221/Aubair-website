@@ -1,0 +1,97 @@
+.footer-main {
+  width: 100%;
+  padding: 38px 120px;
+}
+.footer-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.links-main-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.technology-inner-2 {
+  display: flex;
+  gap: 71px;
+}
+.technologies {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 36px 30px;
+}
+.technologies h1 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  color: #1b1d21;
+}
+.ul-item,
+.ul-item ul {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.ul-item ul li {
+  list-style: none;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1d21;
+}
+.company {
+  padding: 36px 30px;
+}
+.company-description {
+  width: 625px;
+  height: 303px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: #9747ff3d;
+}
+
+.foter-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-copyright {
+  display: flex;
+}
+.bottom-copyright p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0a142f;
+}
+.bottom-tags {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+.bottom-tags a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0a142f;
+}
+.bottom-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.bottom-icons Image {
+  cursor: pointer;
+}

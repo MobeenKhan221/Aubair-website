@@ -4,7 +4,7 @@ import Image from "next/image";
 import "@/style/ServiceSection.css";
 import WebApplication from "@/assets/web-application.webp";
 import MobileApplication from "@/assets/mobile-application.webp";
-import UserInterface from "@/assets/user-interface.webp";
+// import UserInterface from "@/assets/user-interface.webp";
 import RPAImage from "@/assets/rpa.webp";
 import MachineLearning from "@/assets/machine-learning.webp";
 import GENAI from "@/assets/gen-ai.webp";

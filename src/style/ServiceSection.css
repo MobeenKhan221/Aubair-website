@@ -1,17 +1,19 @@
 .augmention-service {
   width: 100%;
-  background-color: red;
+  /* background-color: rgb(236, 194, 194); */
   padding: 38px 120px;
   display: flex;
   flex-direction: column;
   gap: 120px;
 }
 
-.slide-text-1 {
-  width: 100%;
-  padding: 0;
+.slider-image-2 {
+  width: 50%;
 }
 
+.tab-pane {
+  width: 100%;
+}
 .slide-text-1 h1 {
   font-family: "Syne";
   font-weight: 700;
@@ -27,7 +29,6 @@
   width: 100%;
 }
 
-/* Center container for circular animation */
 .main {
   width: 600px;
   height: 600px;
@@ -35,11 +36,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 560px;
   overflow: hidden;
 }
 
 .big-circle {
+  /* background-color: aqua; */
   height: 500px;
   width: 500px;
   position: relative;
@@ -47,121 +48,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: stepped-rotate 5s ease-in-out infinite;
-}
-
-/* Button Styling */
-.nav-link {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 50%;
-  position: relative;
-  text-align: center;
-}
-
-.nav-link img {
-  width: 80%;
-  height: auto;
-}
-
-.nav-link p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: black;
-}
-
-/* Avoid rotating images inside the buttons */
-.nav-link img,
-.nav-link p {
-  transform: none;
-}
-
-/* Circular Animation (Steps with pauses) */
-@keyframes stepped-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(45deg);
-  }
-  40% {
-    transform: rotate(45deg);
-  }
-  60% {
-    transform: rotate(90deg);
-  }
-  80% {
-    transform: rotate(90deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
 }
 
 .icon-block {
-  width: 210px;
-  height: 210px;
   position: absolute;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  transform-origin: center center;
+  transition: transform 2s ease; /* Smooth transition */
 }
 
-/* Icon Block Positions */
-.item-1 {
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.item-2 {
-  top: 50%;
-  right: 0;
-  transform: translate(50%, -50%);
-}
-.item-3 {
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
-.item-4 {
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-}
-.item-5 {
-  top: 20%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-}
-.item-6 {
-  top: 80%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-}
-.item-7 {
-  top: 20%;
-  right: 20%;
-  transform: translate(50%, -50%);
-}
-.item-8 {
-  bottom: 20%;
-  left: 80%;
-  transform: translate(-50%, 50%);
+.icon-block img {
+  width: 50px;
+  height: 50px;
 }
 
-.center-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.icon-block p {
+  font-size: 14px;
+  text-align: center;
+  /* margin-top: 10px; */
 }
 
-.center-logo img {
-  max-width: 200px;
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #000000;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: center;
+}
+
+.nav-link.active {
+  color: #ff5722; /* Active tab color */
+  border: none;
+}
+.btn-inner-img-div {
+  border: 3px solid black;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.btn-inner-img-div.activeBorder {
+  border-color: #ff5722;
 }

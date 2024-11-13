@@ -1,10 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import "@/style/ServiceSection.css";
 import WebApplication from "@/assets/web-application.webp";
 import MobileApplication from "@/assets/mobile-application.webp";
-// import UserInterface from "@/assets/user-interface.webp";
 import RPAImage from "@/assets/rpa.webp";
 import MachineLearning from "@/assets/machine-learning.webp";
 import GENAI from "@/assets/gen-ai.webp";
@@ -23,6 +22,11 @@ import UIimg from "@/assets/Ui.svg";
 
 const ServiceSection = () => {
   const [activeTab, setActiveTab] = useState("first-tabination");
+  const [angles, setAngles] = useState<number[]>(
+    Array(8)
+      .fill(0)
+      .map((_, i) => i * 45) // Start each icon 45 degrees apart
+  );
 
   const services = [
     {
@@ -65,6 +69,15 @@ const ServiceSection = () => {
     },
   ];
 
+  // Update icon positions every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAngles((prevAngles) => prevAngles.map((angle) => angle + 45)); // Move each icon +45 degrees
+    }, 3000);
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
+
   return (
     <section className="augmention-service" id="service">
       <div className="container">
@@ -79,6 +92,9 @@ const ServiceSection = () => {
                 <div
                   key={index}
                   className={`icon-block item-${index + 1}`}
+                  style={{
+                    transform: `rotate(${angles[index]}deg) translate(200px) rotate(-${angles[index]}deg)`,
+                  }}
                   onClick={() => setActiveTab(service.id)}
                 >
                   <button
@@ -87,8 +103,12 @@ const ServiceSection = () => {
                     }`}
                     type="button"
                   >
-                    <div className="btn-inner-img-div">
-                      <Image src={service.imgSrc} alt="Task image" />
+                    <div
+                      className={`btn-inner-img-div ${
+                        activeTab === service.id ? "activeBorder" : ""
+                      }`}
+                    >
+                      <Image src={service.imgSrc} alt={service.name} />
                     </div>
                     <p>{service.name}</p>
                   </button>
@@ -98,28 +118,26 @@ const ServiceSection = () => {
           </div>
 
           <div className="slider-image-2">
-            <div className="tab-content">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className={`tab-pane fade ${
-                    activeTab === service.id ? "show active" : ""
-                  }`}
-                  id={service.id}
-                >
-                  {activeTab === service.id && (
-                    <div className="service-img">
-                      <Image
-                        src={service.image}
-                        alt={service.name}
-                        className="img-fluid"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`tab-pane ${
+                  activeTab === service.id ? "show active" : ""
+                }`}
+                id={service.id}
+              >
+                {activeTab === service.id && (
+                  <div className="service-img">
+                    <Image
+                      src={service.image}
+                      alt={service.name}
+                      className="img-fluid"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -17,17 +17,43 @@
   color: #000000;
 }
 .projects-all {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 80px;
 }
-.project-image-section {
+.project-image-section-main {
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 44px;
 }
+.image-text-inner {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12%;
+}
+
 .project-image-section.reverse {
   flex-direction: row-reverse;
+}
+.projects-text {
+  width: 32%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.projects-text h2 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58.51px;
+  letter-spacing: -1px;
+  color: #000000;
 }
 .projects-text p {
   font-family: "Montserrat";
@@ -37,9 +63,70 @@
   letter-spacing: -1px;
   color: #000000;
 }
-.image-div {
+.image-div-main {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  position: relative;
 }
+
+.image-div {
+  width: 581px;
+  height: 322px;
+  background-color: #29292b;
+  border-radius: 20px;
+}
+
 .image-div Image {
   width: 100%;
+}
+.project-video-line-main {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+.project-line {
+  position: absolute;
+  left: 36%;
+  top: -56%;
+}
+
+.video-div {
+  width: 730px;
+  height: 372px;
+  /* position: absolute; */
+  /* margin-left: 173px; */
+}
+.video-div video {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* projects 2 */
+.project-image-section-main-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 150px;
+}
+.image-text-inner-2 {
+  display: flex;
+  align-items: center;
+  gap: 18%;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.project-video-line-main-2 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+}
+.project-line-2 {
+  position: absolute;
+  margin-top: -16%;
+  margin-left: 22%;
 }

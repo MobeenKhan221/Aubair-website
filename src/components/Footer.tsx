@@ -76,15 +76,15 @@ export default function Footer() {
             <p>© 2023 All rights reserved</p>
           </div>
           <div className="bottom-tags">
-            <a href="">Terms</a>
-            <a href="">Privacy</a>
-            <a href="">Cookies</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
           </div>
           <div className="bottom-icons">
-            <Image src={Faebook} alt="icon" />
-            <Image src={Twitter} alt="icon" />
-            <Image src={Instagram} alt="icon" />
-            <Image src={Youtube} alt="icon" />
+            <Image src={Faebook} alt="icon" className="btm-icon" />
+            <Image src={Twitter} alt="icon" className="btm-icon" />
+            <Image src={Instagram} alt="icon" className="btm-icon" />
+            <Image src={Youtube} alt="icon" className="btm-icon" />
           </div>
         </div>
       </div>

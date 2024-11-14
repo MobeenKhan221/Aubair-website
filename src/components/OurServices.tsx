@@ -4,21 +4,21 @@ import Image from "next/image";
 import "@/style/ServiceSection.css";
 import WebApplication from "@/assets/web-application.webp";
 import MobileApplication from "@/assets/mobile-application.webp";
+import CloudIntegration from "@/assets/cloud-integration.webp";
+import DIGITALMarketing from "@/assets/digital-marketing.webp";
 import RPAImage from "@/assets/rpa.webp";
 import MachineLearning from "@/assets/machine-learning.webp";
 import GENAI from "@/assets/gen-ai.webp";
-import DIGITALMarketing from "@/assets/digital-marketing.webp";
-import CloudIntegration from "@/assets/cloud-integration.webp";
 import BusinessInteligence from "@/assets/business-intelligence.webp";
 
-import APIimg from "@/assets/Api.svg";
-import Cloudimg from "@/assets/cloud-integration-img.svg";
-import Database from "@/assets/Database.svg";
-import Webimg from "@/assets/webimg.svg";
-import DevicePlain from "@/assets/devicon-plain_fastapi-wordmark.svg";
-import Mobileimg from "@/assets/mobile-application-img.svg";
-import Taskimg from "@/assets/Task.svg";
-import UIimg from "@/assets/Ui.svg";
+import WebAplication2 from "@/assets/Api.svg";
+import MobileAplication2 from "@/assets/mobile-application-img.svg";
+import CloudIntegration2 from "@/assets/cloud-integration-img.svg";
+import DigitalMarkiting2 from "@/assets/Database.svg";
+import RPAImage2 from "@/assets/webimg.svg";
+import MachineLearning2 from "@/assets/devicon-plain_fastapi-wordmark.svg";
+import GENAIimg2 from "@/assets/Task.svg";
+import BuisnessInteligence from "@/assets/Ui.svg";
 
 const ServiceSection = () => {
   const [activeTab, setActiveTab] = useState("first-tabination");
@@ -33,39 +33,49 @@ const ServiceSection = () => {
       id: "first-tabination",
       name: "Web Application",
       image: WebApplication,
-      imgSrc: APIimg,
+      imgSrc: WebAplication2,
     },
     {
       id: "second-tabination",
       name: "Mobile Application",
       image: MobileApplication,
-      imgSrc: Cloudimg,
+      imgSrc: CloudIntegration2,
     },
     {
       id: "third-tabination",
       name: "Cloud Integration",
       image: CloudIntegration,
-      imgSrc: Database,
+      imgSrc: DigitalMarkiting2,
     },
-    { id: "fourth-tabination", name: "RPA", image: RPAImage, imgSrc: Webimg },
+    {
+      id: "fourth-tabination",
+      name: "RPA",
+      image: RPAImage,
+      imgSrc: RPAImage2,
+    },
     {
       id: "five-tabination",
       name: "Machine Learning",
       image: MachineLearning,
-      imgSrc: DevicePlain,
+      imgSrc: MachineLearning2,
     },
     {
       id: "six-tabination",
       name: "Digital Marketing",
       image: DIGITALMarketing,
-      imgSrc: Mobileimg,
+      imgSrc: MobileAplication2,
     },
-    { id: "seventh-tabination", name: "Gen AI", image: GENAI, imgSrc: Taskimg },
+    {
+      id: "seventh-tabination",
+      name: "Gen AI",
+      image: GENAI,
+      imgSrc: GENAIimg2,
+    },
     {
       id: "eighth-tabination",
       name: "Business Intelligence",
       image: BusinessInteligence,
-      imgSrc: UIimg,
+      imgSrc: BuisnessInteligence,
     },
   ];
 
@@ -82,7 +92,7 @@ const ServiceSection = () => {
     <section className="augmention-service" id="service">
       <div className="container">
         <div className="slide-text-1">
-          <h1>Our Services</h1>
+          <h2>Our Services</h2>
         </div>
 
         <div className="Slider-and-images-main-div">

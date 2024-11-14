@@ -18,7 +18,7 @@
 .slide-text h1 {
   font-family: "Syne";
   font-weight: 700;
-  font-size: 84px;
+  font-size: 48px;
   line-height: 75.6px;
   letter-spacing: -4%;
   color: #000000;
@@ -32,7 +32,7 @@
 .skill-slide-main {
   display: flex;
   gap: 24px;
-  height: 93px;
+  /* height: 93px; */
   width: 100%;
   animation: scroll 30s linear infinite; /* Continuous scroll animation */
 }
@@ -68,7 +68,9 @@
 .industry-grid {
   display: flex;
   justify-content: center;
-  gap: 44px;
+  gap: 35px;
+  /* background-color: red; */
+  flex-wrap: wrap;
 }
 .industry-main {
   display: flex;
@@ -79,8 +81,8 @@
   padding: 0 120px;
 }
 .industry-data {
-  width: 327px;
-  height: 100px;
+  width: 226px;
+  height: 66px;
   border-radius: 60px;
   border: 2px solid #29292b;
   display: flex;
@@ -90,8 +92,8 @@
 .industry-data p {
   font-family: "Montserrat";
   font-weight: 400;
-  font-size: 36px;
-  line-height: 32.4px;
+  font-size: 24px;
+  line-height: 21.6px;
   letter-spacing: -1px;
   color: #29292b;
 }
@@ -101,8 +103,81 @@
 .industry .industry-text h1 {
   font-family: "Syne";
   font-weight: 700;
-  font-size: 84px;
+  font-size: 48px;
   line-height: 75.6px;
   letter-spacing: -4%;
   color: #000000;
+}
+
+@media only screen and (max-width: 1440px) {
+  .slide-text {
+    padding: 0 80px;
+  }
+  .industry-main {
+    padding: 0 80px;
+  }
+  .skill-slide p {
+    font-size: 18px;
+    letter-spacing: -1px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .slide-text {
+    padding: 0 60px;
+  }
+  .industry-main {
+    padding: 0 60px;
+  }
+  .slide-slider-main {
+    height: 70px;
+  }
+  .skill-slide p {
+    font-size: 18px;
+    letter-spacing: -1px;
+  }
+  .skill-slide-img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .slide-text {
+    padding: 0 30px;
+  }
+  .industry-main {
+    padding: 0 30px;
+  }
+  .industry-grid {
+    gap: 12px;
+  }
+  .industry-data {
+    width: 170px;
+    height: 66px;
+  }
+  .industry-data p {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    letter-spacing: -1px;
+    color: #29292b;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .industry-grid {
+    gap: 20px;
+  }
+  .industry-data {
+    width: 120px;
+    height: 40px;
+  }
+  .industry-data p {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21.6px;
+    letter-spacing: -1px;
+    color: #29292b;
+  }
 }

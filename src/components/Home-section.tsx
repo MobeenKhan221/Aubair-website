@@ -31,7 +31,11 @@ export default function HomeSection() {
         <div className="inner-1">
           <div className="home-text">
             <h2>
-              Welcome to <span>Aubair&apos;s </span>Digital World
+              Welcome to{" "}
+              <span>
+                Aubair&apos;s <br />
+              </span>
+              Digital World
             </h2>
             <p>
               Hi, I&apos;m Aubair! I&apos;m a passionate Full-Stack MERN
@@ -50,16 +54,38 @@ export default function HomeSection() {
           </div>
         </div>
         <div className="inner-2">
-          <div className="home-inner">
+          <div className="home-inner home-inner-2-main">
             <div className="upwork-profile">
               <div className="upwork-image-box">
-                <Image src={UpworkIcon} alt="Upwork image" />
-                <Image src={Upworktext} alt="upwork text" />
-                <Image src={TopRelated} alt="Upwork image" />
+                <Image
+                  src={UpworkIcon}
+                  alt="Upwork image"
+                  className="UpImageMain"
+                />
+                <Image
+                  src={Upworktext}
+                  alt="upwork text"
+                  className="UpPercentage"
+                />
+                <Image
+                  src={TopRelated}
+                  alt="Upwork image"
+                  className="UpToprated"
+                />
               </div>
               <div className="profile-sec">
-                <div>
-                  <Image src={ProfileMan} alt="Profile upload" />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Image
+                    src={ProfileMan}
+                    alt="Profile upload"
+                    className="profile-imgs-sec"
+                  />
                 </div>
                 <div>
                   <p className="profile-name">AUBAIR</p>
@@ -74,16 +100,16 @@ export default function HomeSection() {
               <button className="Btn-1">HIRE NOW</button>
               <button className="Btn-2">BOOK MEETING</button>
             </div>
-            <div className="counting-sec">
-              {ProjectsData.map((project, index) => (
-                <div key={index} className="profjetcs-calcualtion">
-                  <p className="projects">{project.projetcs}</p>
-                  <p className="projects-name">{project.projectName}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
+      </div>
+      <div className="counting-sec">
+        {ProjectsData.map((project, index) => (
+          <div key={index} className="profjetcs-calcualtion">
+            <p className="projects">{project.projetcs}</p>
+            <p className="projects-name">{project.projectName}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

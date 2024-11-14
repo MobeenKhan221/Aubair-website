@@ -27,13 +27,9 @@ const industries = [
   { industry: "Finance" },
   { industry: "E-commerce" },
   { industry: "Manufacturing" },
-];
-const industries2 = [
   { industry: "Technology" },
   { industry: "Healthcare" },
   { industry: "Networking" },
-];
-const industries3 = [
   { industry: "Education" },
   { industry: "F & B" },
   { industry: "Travel" },
@@ -53,7 +49,11 @@ export default function SkillsTechnology() {
             {skillData.concat(skillData).map((skill, index) => (
               <div key={index} className="skill-slide">
                 <p>{skill.skill}</p>
-                <Image src={skill.imagesrc} alt={`${skill.skill} icon`} />
+                <Image
+                  src={skill.imagesrc}
+                  alt={`${skill.skill} icon`}
+                  className="skill-slide-img"
+                />
               </div>
             ))}
           </div>
@@ -64,20 +64,6 @@ export default function SkillsTechnology() {
           </div>
           <div className="industry-grid">
             {industries.map((industry, index) => (
-              <div key={index} className="industry-data">
-                <p>{industry.industry}</p>
-              </div>
-            ))}
-          </div>
-          <div className="industry-grid">
-            {industries2.map((industry, index) => (
-              <div key={index} className="industry-data">
-                <p>{industry.industry}</p>
-              </div>
-            ))}
-          </div>
-          <div className="industry-grid">
-            {industries3.map((industry, index) => (
               <div key={index} className="industry-data">
                 <p>{industry.industry}</p>
               </div>

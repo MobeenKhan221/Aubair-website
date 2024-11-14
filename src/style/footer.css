@@ -35,6 +35,7 @@
   gap: 20px;
   display: flex;
   flex-direction: column;
+  white-space: pre;
 }
 .ul-item ul li {
   list-style: none;
@@ -47,14 +48,33 @@
 .company {
   padding: 36px 30px;
 }
+.company .ul-item ul li {
+  cursor: pointer;
+}
 .company-description {
   width: 625px;
-  height: 303px;
+  height: auto;
   padding: 36px 30px;
   display: flex;
   flex-direction: column;
   gap: 40px;
   background: #9747ff3d;
+}
+.company-description h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.38px;
+  letter-spacing: -1px;
+  color: #29292b;
+}
+.company-description p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.5px;
+  letter-spacing: -1px;
+  color: #29292b;
 }
 
 .foter-bottom {
@@ -92,6 +112,54 @@
   align-items: center;
   gap: 20px;
 }
-.bottom-icons Image {
+.bottom-icons .btm-icon {
   cursor: pointer;
 }
+.bottom-icons .btm-icon:hover {
+  color: red;
+  transform: scale(0.9);
+}
+
+@media only screen and (max-width: 1440px) {
+  .footer-main {
+    padding: 38px 80px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer-main {
+    padding: 38px 60px;
+  }
+  .links-main-footer {
+    flex-wrap: wrap;
+  }
+  .foter-bottom {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer-main {
+    padding: 38px 30px;
+  }
+  .technologies {
+    padding: 36px 0px;
+  }
+  .links-main-footer {
+    gap: 30px;
+  }
+  .company-description {
+    gap: 15px;
+  }
+  .company-description h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .company-description p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19.5px;
+  }
+}
+/* @media only screen and (max-width: 455px) {
+} */

@@ -3,6 +3,7 @@ import HomeSection from "@/components/Home-section";
 import OurServices from "@/components/OurServices";
 import SkillsTechnology from "@/components/SkillsTechnology";
 import Projects from "@/components/Projects";
+import GetForm from "@/components/GetPopup";
 import Footer from "@/components/Footer";
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <OurServices />
       <SkillsTechnology />
       <Projects />
+      <GetForm />
       <Footer />
     </div>
   );

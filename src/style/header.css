@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 38px 120px;
+  position: relative;
 }
 
 .header-inner {
@@ -71,7 +72,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   padding: 0.5rem 0;
-  z-index: 999;
+  z-index: 90099;
   width: 100%;
   gap: 20px;
 }

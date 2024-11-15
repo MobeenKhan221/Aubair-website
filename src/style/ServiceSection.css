@@ -28,7 +28,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 38px 0;
-  background: red;
+  /* background: red; */
 }
 
 .main {
@@ -89,10 +89,10 @@
   text-align: center;
 }
 
-.nav-link.active {
-  color: #ff5722; /* Active tab color */
+/* .nav-link.active {
+  color: #8e2de2; 
   border: none;
-}
+} */
 .btn-inner-img-div {
   /* border: 3px solid black; */
   /* width: 120px; */
@@ -102,9 +102,7 @@
   justify-content: center;
   border-radius: 100px;
 }
-.btn-inner-img-div.activeBorder {
-  border-color: #ff5722;
-}
+
 .service-img {
   width: 100%;
   display: flex;

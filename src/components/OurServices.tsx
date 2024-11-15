@@ -11,22 +11,31 @@ import MachineLearning from "@/assets/machine-learning.webp";
 import GENAI from "@/assets/gen-ai.webp";
 import BusinessInteligence from "@/assets/business-intelligence.webp";
 
-import WebAplication2 from "@/assets/Api.svg";
-import MobileAplication2 from "@/assets/mobile-application-img.svg";
-import CloudIntegration2 from "@/assets/cloud-integration-img.svg";
-import DigitalMarkiting2 from "@/assets/Database.svg";
-import RPAImage2 from "@/assets/webimg.svg";
-import MachineLearning2 from "@/assets/devicon-plain_fastapi-wordmark.svg";
-import GENAIimg2 from "@/assets/Task.svg";
-import BuisnessInteligence from "@/assets/Ui.svg";
+import WebAplication2 from "@/assets/Webapplication-2.svg";
+import WebAplicationPink from "@/assets/Webapplication-Pink.svg";
+import MobileAplication2 from "@/assets/mobile-application-img-2.svg";
+import MobileApLicationPink from "@/assets/mobile-application-Pink.svg";
+import CloudIntegration2 from "@/assets/cloud-integration-img-2.svg";
+import CloudIntegrationPink from "@/assets/cloud-integration-Pink.svg";
+import DigitalMarkiting2 from "@/assets/Digital-marketing-2.svg";
+import DigitalMarkitingPink from "@/assets/Digital-marketing-Pink.svg";
+import RPAImage2 from "@/assets/RPAImage-2.svg";
+import RPAImagePink from "@/assets/RPAImage-Pink.svg";
+import MachineLearning2 from "@/assets/Machine-Learning-2.svg";
+import MachineLearningPink from "@/assets/Machine-Learning-Pink.svg";
+import GENAIimg2 from "@/assets/GENAIimg-2.svg";
+import GENAIimgPink from "@/assets/GENAIimg-Pink.svg";
+import BuisnessInteligence from "@/assets/BuisessInteligence-2.svg";
+import BuisnessInteligencePink from "@/assets/BuisessInteligence-Pink.svg";
 
 const ServiceSection = () => {
   const [activeTab, setActiveTab] = useState("first-tabination");
   const [angles, setAngles] = useState<number[]>(
     Array(8)
       .fill(0)
-      .map((_, i) => i * 45) // Start each icon 45 degrees apart
+      .map((_, i) => i * 45)
   );
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const services = [
     {
@@ -34,58 +43,73 @@ const ServiceSection = () => {
       name: "Web Application",
       image: WebApplication,
       imgSrc: WebAplication2,
+      imgSrcPink: WebAplicationPink, // Pink version
     },
     {
       id: "second-tabination",
       name: "Mobile Application",
       image: MobileApplication,
-      imgSrc: CloudIntegration2,
+      imgSrc: MobileAplication2,
+      imgSrcPink: MobileApLicationPink, // Pink version
     },
     {
       id: "third-tabination",
       name: "Cloud Integration",
       image: CloudIntegration,
-      imgSrc: DigitalMarkiting2,
+      imgSrc: CloudIntegration2,
+      imgSrcPink: CloudIntegrationPink, // Pink version
     },
     {
       id: "fourth-tabination",
       name: "RPA",
       image: RPAImage,
       imgSrc: RPAImage2,
+      imgSrcPink: RPAImagePink, // Pink version
     },
     {
       id: "five-tabination",
       name: "Machine Learning",
       image: MachineLearning,
       imgSrc: MachineLearning2,
+      imgSrcPink: MachineLearningPink, // Pink version
     },
     {
       id: "six-tabination",
       name: "Digital Marketing",
       image: DIGITALMarketing,
-      imgSrc: MobileAplication2,
+      imgSrc: DigitalMarkiting2,
+      imgSrcPink: DigitalMarkitingPink, // Pink version
     },
     {
       id: "seventh-tabination",
       name: "Gen AI",
       image: GENAI,
       imgSrc: GENAIimg2,
+      imgSrcPink: GENAIimgPink, // Pink version
     },
     {
       id: "eighth-tabination",
       name: "Business Intelligence",
       image: BusinessInteligence,
       imgSrc: BuisnessInteligence,
+      imgSrcPink: BuisnessInteligencePink,
     },
   ];
 
-  // Update icon positions every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setAngles((prevAngles) => prevAngles.map((angle) => angle + 45)); // Move each icon +45 degrees
+      setAngles((prevAngles) => {
+        const newAngles = prevAngles.map((angle) => angle + 45);
+        const newActiveIndex = newAngles.findIndex(
+          (angle) => angle % 360 === 0
+        );
+        setActiveIndex(newActiveIndex);
+        setActiveTab(services[newActiveIndex].id);
+        return newAngles;
+      });
     }, 3000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -104,6 +128,7 @@ const ServiceSection = () => {
                   className={`icon-block item-${index + 1}`}
                   style={{
                     transform: `rotate(${angles[index]}deg) translate(200px) rotate(-${angles[index]}deg)`,
+                    color: activeIndex === index ? "#ff5722" : "#000000", // Set color red for 0-degree icon, default for others
                   }}
                   onClick={() => setActiveTab(service.id)}
                 >
@@ -118,7 +143,14 @@ const ServiceSection = () => {
                         activeTab === service.id ? "activeBorder" : ""
                       }`}
                     >
-                      <Image src={service.imgSrc} alt={service.name} />
+                      <Image
+                        src={
+                          activeIndex === index
+                            ? service.imgSrcPink
+                            : service.imgSrc
+                        }
+                        alt={service.name}
+                      />
                     </div>
                     <p>{service.name}</p>
                   </button>

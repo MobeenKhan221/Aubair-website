@@ -18,15 +18,6 @@ const dropItems = [
   { dropItem: "service1" },
   { dropItem: "service1" },
   { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
 ];
 export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);

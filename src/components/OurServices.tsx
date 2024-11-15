@@ -33,9 +33,10 @@ const ServiceSection = () => {
   const [angles, setAngles] = useState<number[]>(
     Array(8)
       .fill(0)
-      .map((_, i) => i * 45)
+      .map((_, i) => i * 45) // Start each icon 45 degrees apart
   );
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // Track index of icon at 0 degrees
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null); // Track index of hovered icon
 
   const services = [
     {
@@ -92,14 +93,31 @@ const ServiceSection = () => {
       name: "Business Intelligence",
       image: BusinessInteligence,
       imgSrc: BuisnessInteligence,
-      imgSrcPink: BuisnessInteligencePink,
+      imgSrcPink: BuisnessInteligencePink, // Pink version
     },
   ];
 
+  // Handle click to change the active icon without moving to 0 degrees
+  const handleClick = (index: number) => {
+    setActiveIndex(index);
+    setActiveTab(services[index].id);
+  };
+
+  // Handle hover start
+  const handleHoverStart = (index: number) => {
+    setHoverIndex(index); // Set the hovered index
+  };
+
+  // Handle hover end
+  const handleHoverEnd = () => {
+    setHoverIndex(null); // Clear the hovered index
+  };
+
+  // Rotate icons every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setAngles((prevAngles) => {
-        const newAngles = prevAngles.map((angle) => angle + 45);
+        const newAngles = prevAngles.map((angle) => angle + 45); // Rotate icons
         const newActiveIndex = newAngles.findIndex(
           (angle) => angle % 360 === 0
         );
@@ -109,7 +127,7 @@ const ServiceSection = () => {
       });
     }, 3000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
   return (
@@ -128,9 +146,11 @@ const ServiceSection = () => {
                   className={`icon-block item-${index + 1}`}
                   style={{
                     transform: `rotate(${angles[index]}deg) translate(200px) rotate(-${angles[index]}deg)`,
-                    color: activeIndex === index ? "#ff5722" : "#000000", // Set color red for 0-degree icon, default for others
+                    color: activeIndex === index ? "#ff5722" : "#000000",
                   }}
-                  onClick={() => setActiveTab(service.id)}
+                  onClick={() => handleClick(index)}
+                  onMouseEnter={() => handleHoverStart(index)}
+                  onMouseLeave={handleHoverEnd}
                 >
                   <button
                     className={`nav-link ${
@@ -145,9 +165,9 @@ const ServiceSection = () => {
                     >
                       <Image
                         src={
-                          activeIndex === index
-                            ? service.imgSrcPink
-                            : service.imgSrc
+                          hoverIndex === index || activeIndex === index
+                            ? service.imgSrcPink // Use pink image for active or hovered icon
+                            : service.imgSrc // Default image for others
                         }
                         alt={service.name}
                       />

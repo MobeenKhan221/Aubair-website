@@ -33,9 +33,9 @@ const ServiceSection = () => {
   const [angles, setAngles] = useState<number[]>(
     Array(8)
       .fill(0)
-      .map((_, i) => i * 45) // Start each icon 45 degrees apart
+      .map((_, i) => i * 45)
   );
-  const [activeIndex, setActiveIndex] = useState(0); // Track index of icon at 0 degrees
+  const [activeIndex, setActiveIndex] = useState(0);
   const [hoverIndex, setHoverIndex] = useState<number | null>(null); // Track index of hovered icon
 
   const services = [
@@ -86,38 +86,34 @@ const ServiceSection = () => {
       name: "Gen AI",
       image: GENAI,
       imgSrc: GENAIimg2,
-      imgSrcPink: GENAIimgPink, // Pink version
+      imgSrcPink: GENAIimgPink,
     },
     {
       id: "eighth-tabination",
       name: "Business Intelligence",
       image: BusinessInteligence,
       imgSrc: BuisnessInteligence,
-      imgSrcPink: BuisnessInteligencePink, // Pink version
+      imgSrcPink: BuisnessInteligencePink,
     },
   ];
 
-  // Handle click to change the active icon without moving to 0 degrees
   const handleClick = (index: number) => {
     setActiveIndex(index);
     setActiveTab(services[index].id);
   };
 
-  // Handle hover start
   const handleHoverStart = (index: number) => {
-    setHoverIndex(index); // Set the hovered index
+    setHoverIndex(index);
   };
 
-  // Handle hover end
   const handleHoverEnd = () => {
-    setHoverIndex(null); // Clear the hovered index
+    setHoverIndex(null);
   };
 
-  // Rotate icons every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setAngles((prevAngles) => {
-        const newAngles = prevAngles.map((angle) => angle + 45); // Rotate icons
+        const newAngles = prevAngles.map((angle) => angle + 45);
         const newActiveIndex = newAngles.findIndex(
           (angle) => angle % 360 === 0
         );
@@ -127,7 +123,7 @@ const ServiceSection = () => {
       });
     }, 3000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -166,8 +162,8 @@ const ServiceSection = () => {
                       <Image
                         src={
                           hoverIndex === index || activeIndex === index
-                            ? service.imgSrcPink // Use pink image for active or hovered icon
-                            : service.imgSrc // Default image for others
+                            ? service.imgSrcPink
+                            : service.imgSrc
                         }
                         alt={service.name}
                       />

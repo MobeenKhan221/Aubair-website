@@ -11,6 +11,7 @@ import MachineLearning from "@/assets/machine-learning.webp";
 import GENAI from "@/assets/gen-ai.webp";
 import BusinessInteligence from "@/assets/business-intelligence.webp";
 
+// Import your SVGs
 import WebAplication2 from "@/assets/Webapplication-2.svg";
 import WebAplicationPink from "@/assets/Webapplication-Pink.svg";
 import MobileAplication2 from "@/assets/mobile-application-img-2.svg";
@@ -36,7 +37,7 @@ const ServiceSection = () => {
       .map((_, i) => i * 45)
   );
   const [activeIndex, setActiveIndex] = useState(0);
-  const [hoverIndex, setHoverIndex] = useState<number | null>(null); // Track index of hovered icon
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   const services = [
     {
@@ -44,42 +45,42 @@ const ServiceSection = () => {
       name: "Web Application",
       image: WebApplication,
       imgSrc: WebAplication2,
-      imgSrcPink: WebAplicationPink, // Pink version
+      imgSrcPink: WebAplicationPink,
     },
     {
       id: "second-tabination",
       name: "Mobile Application",
       image: MobileApplication,
       imgSrc: MobileAplication2,
-      imgSrcPink: MobileApLicationPink, // Pink version
+      imgSrcPink: MobileApLicationPink,
     },
     {
       id: "third-tabination",
       name: "Cloud Integration",
       image: CloudIntegration,
       imgSrc: CloudIntegration2,
-      imgSrcPink: CloudIntegrationPink, // Pink version
+      imgSrcPink: CloudIntegrationPink,
     },
     {
       id: "fourth-tabination",
       name: "RPA",
       image: RPAImage,
       imgSrc: RPAImage2,
-      imgSrcPink: RPAImagePink, // Pink version
+      imgSrcPink: RPAImagePink,
     },
     {
       id: "five-tabination",
       name: "Machine Learning",
       image: MachineLearning,
       imgSrc: MachineLearning2,
-      imgSrcPink: MachineLearningPink, // Pink version
+      imgSrcPink: MachineLearningPink,
     },
     {
       id: "six-tabination",
       name: "Digital Marketing",
       image: DIGITALMarketing,
       imgSrc: DigitalMarkiting2,
-      imgSrcPink: DigitalMarkitingPink, // Pink version
+      imgSrcPink: DigitalMarkitingPink,
     },
     {
       id: "seventh-tabination",
@@ -134,7 +135,8 @@ const ServiceSection = () => {
         </div>
 
         <div className="Slider-and-images-main-div">
-          <div className="main">
+          {/* Big Circle (Visible on large screens) */}
+          <div className="main big-circle-view">
             <div className="big-circle">
               {services.map((service, index) => (
                 <div
@@ -175,6 +177,30 @@ const ServiceSection = () => {
             </div>
           </div>
 
+          {/* Flex Row (Visible on screens < 1440px) */}
+          <div className="flex-row-view">
+            <div className="flex-row-container">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="flex-row-item"
+                  onClick={() => handleClick(index)}
+                  onMouseEnter={() => handleHoverStart(index)}
+                  onMouseLeave={handleHoverEnd}
+                >
+                  <Image
+                    src={
+                      hoverIndex === index || activeIndex === index
+                        ? service.imgSrcPink
+                        : service.imgSrc
+                    }
+                    alt={service.name}
+                  />
+                  <p>{service.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="slider-image-2">
             {services.map((service, index) => (
               <div

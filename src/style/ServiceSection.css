@@ -34,6 +34,7 @@
 .main {
   width: 50%;
   /* height: 600px; */
+  padding: 40px 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -50,6 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* padding: 30px 0; */
 }
 
 .icon-block {
@@ -110,8 +112,93 @@
   align-items: center;
   justify-content: center;
 }
-@media only screen and (max-width: 1440px) {
+
+@media (min-width: 1440px) {
+  .big-circle-view {
+    display: block;
+  }
+  .flex-row-view {
+    display: none;
+  }
+}
+
+@media (max-width: 1440px) {
+  .Slider-and-images-main-div {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 70px;
+  }
   .augmention-service {
     padding: 38px 80px;
+  }
+  .big-circle-view {
+    display: none;
+  }
+  .flex-row-view {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+  .flex-row-container {
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+  }
+  .flex-row-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    /* background-color: red; */
+    width: auto;
+    /* justify-content: center; */
+  }
+  .flex-row-item p {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .augmention-service {
+    padding: 38px 80px;
+  }
+  .slider-image-2 {
+    width: 90%;
+  }
+  .tab-pane {
+    width: 100%;
+  }
+  .service-img {
+    width: 100%;
+  }
+  .service-img .img-fluid {
+    width: 100%;
+    height: 100%;
+  }
+  .flex-row-container {
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    overflow-x: auto; /* Enable horizontal scroll when content overflows */
+    -webkit-overflow-scrolling: touch; /* For smoother scroll experience on iOS */
+  }
+
+  /* Optional: Style the scrollbar for better UI */
+  .flex-row-view::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .flex-row-view::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+
+  .flex-row-view::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .augmention-service {
+    padding: 38px 30px;
   }
 }

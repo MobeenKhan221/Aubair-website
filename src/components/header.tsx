@@ -40,7 +40,7 @@ export default function Header() {
 
         {/* Hamburger icon for mobile screens */}
         <div className="hamburger-icon" onClick={toggleMobileMenu}>
-          <Image src={HamburgerIcon} alt="Menu" />
+          <Image src={HamburgerIcon} alt="Menu" className="HamIcon" />
         </div>
 
         {/* Conditional rendering of navigation links */}

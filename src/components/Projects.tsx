@@ -1,11 +1,11 @@
 import "@/style/projets.css";
 // import Image1 from "@/assets/Mask group.png";
 // import Image2 from "@/assets/Mask group (1).png";
-import Projects1Line from "@/assets/projects-1-line.svg";
-import Projects2Line from "@/assets/projects-2-line.svg";
+// import Projects1Line from "@/assets/projects-1-line.svg";
+// import Projects2Line from "@/assets/projects-2-line.svg";
 // import Projects3Line from "@/assets/prjects-3-line.svg";
 // import Video1 from "@/assets/video.mp4";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -32,9 +32,9 @@ export default function Projects() {
               </div>
             </div>
             <div className="project-video-line-main">
-              <div className="project-line">
+              {/* <div className="project-line">
                 <Image src={Projects1Line} alt="Project 1 Line" />
-              </div>
+              </div> */}
               <div className="video-div">
                 <video controls>
                   {/* <source src={Video1} type="video/mp4" /> */}
@@ -62,9 +62,9 @@ export default function Projects() {
               </div>
             </div>
             <div className="project-video-line-main-2">
-              <div className="project-line-2">
+              {/* <div className="project-line-2">
                 <Image src={Projects2Line} alt="Project 1 Line" />
-              </div>
+              </div> */}
               <div className="video-div">
                 <video controls>
                   {/* <source src={Video1} type="video/mp4" /> */}
@@ -92,9 +92,9 @@ export default function Projects() {
               </div>
             </div>
             <div className="project-video-line-main">
-              <div className="project-line">
+              {/* <div className="project-line">
                 <Image src={Projects1Line} alt="Project 1 Line" />
-              </div>
+              </div> */}
               <div className="video-div">
                 <video controls>
                   {/* <source src={Video1} type="video/mp4" /> */}

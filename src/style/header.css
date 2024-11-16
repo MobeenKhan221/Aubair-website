@@ -132,6 +132,11 @@
   .hamburger-icon {
     display: block;
     cursor: pointer;
+    width: 54px;
+    height: 54px;
+  }
+  .hamburger-icon .HamIcon {
+    width: 100%;
   }
 }
 

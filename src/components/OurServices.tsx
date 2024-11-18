@@ -1,7 +1,11 @@
+// ServiceSection.tsx
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import "@/style/ServiceSection.css";
+import FlexRowView from "@/components/Carasoul"; // Import the new FlexRowView component
+
+// images import
 import WebApplication from "@/assets/web-application.webp";
 import MobileApplication from "@/assets/mobile-application.webp";
 import CloudIntegration from "@/assets/cloud-integration.webp";
@@ -178,29 +182,15 @@ const ServiceSection = () => {
           </div>
 
           {/* Flex Row (Visible on screens < 1440px) */}
-          <div className="flex-row-view">
-            <div className="flex-row-container">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="flex-row-item"
-                  onClick={() => handleClick(index)}
-                  onMouseEnter={() => handleHoverStart(index)}
-                  onMouseLeave={handleHoverEnd}
-                >
-                  <Image
-                    src={
-                      hoverIndex === index || activeIndex === index
-                        ? service.imgSrcPink
-                        : service.imgSrc
-                    }
-                    alt={service.name}
-                  />
-                  <p>{service.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <FlexRowView
+            services={services}
+            activeIndex={activeIndex}
+            hoverIndex={hoverIndex}
+            handleClick={handleClick}
+            handleHoverStart={handleHoverStart}
+            handleHoverEnd={handleHoverEnd}
+          />
+
           <div className="slider-image-2">
             {services.map((service, index) => (
               <div

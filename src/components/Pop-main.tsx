@@ -90,7 +90,9 @@ export default function PopMain({ onClose }: PopMainProps) {
 
           <div className="Pop-buttons">
             <button onClick={handleSubmit}>Send</button>
-            <button onClick={onClose}>Close</button>
+            <button onClick={onClose} className="closed-btn">
+              Close
+            </button>
           </div>
         </div>
       </div>

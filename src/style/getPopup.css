@@ -71,17 +71,17 @@
 .Pop-form h2 {
   margin-top: 0;
   font-size: 1.5rem;
-  color: #333;
+  color: #8e2de2;
 }
 .Pop-form label {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #555;
+  color: #8e2de2;
 }
 .Pop-form input,
 .Pop-form textarea {
   padding: 0.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid #8e2de2;
   border-radius: 4px;
   font-size: 1rem;
   resize: vertical;
@@ -114,7 +114,7 @@ input[type="number"] {
 .Pop-buttons button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: none;
+  border: 1px solid #8e2de2;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -123,11 +123,14 @@ input[type="number"] {
   color: #fff;
 }
 .Pop-buttons button:last-child {
-  background-color: #ccc;
-  color: #333;
+  background-color: #fff;
+  color: #8e2de2;
 }
 .Pop-buttons button:hover {
   opacity: 0.9;
+}
+.closed-btn {
+  border: 1px solid #8e2de2;
 }
 
 @media only screen and (max-width: 1440px) {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false, // Enable React Strict Mode (optional)

@@ -10,14 +10,6 @@ const dropItems = [
   { dropItem: "service1" },
   { dropItem: "service1" },
   { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
 ];
 export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,10 +23,20 @@ export default function Header() {
     setServicesMenuOpen(!isServicesMenuOpen);
   };
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="header-main">
       <div className="header-inner">
-        <div className="Main-logo">
+        <div
+          className="Main-logo"
+          onClick={() => scrollToSection("home")}
+          style={{ cursor: "pointer" }}
+        >
           <Image src={MainLogo} alt="Logo image" />
         </div>
 
@@ -51,7 +53,7 @@ export default function Header() {
             onMouseEnter={() => setServicesMenuOpen(true)}
             onMouseLeave={() => setServicesMenuOpen(false)}
           >
-            Services
+            <a onClick={() => scrollToSection("services")}>Services</a>
             <Image
               src={DropDownIcon}
               alt="Dropdown Icon"
@@ -60,7 +62,12 @@ export default function Header() {
             {isServicesMenuOpen && (
               <div className="dropdown-menu">
                 {dropItems.map((dropdown, index) => (
-                  <a key={index} href="#" className="dropdown-item">
+                  <a
+                    key={index}
+                    href="#"
+                    className="dropdown-item"
+                    onClick={() => scrollToSection("services")}
+                  >
                     {dropdown.dropItem}
                   </a>
                 ))}
@@ -68,16 +75,28 @@ export default function Header() {
             )}
           </div>
 
-          <a href="#" className="tags">
+          <a
+            href="#"
+            className="tags"
+            onClick={() => scrollToSection("skills")}
+          >
             Case Studies
           </a>
-          <a href="#" className="tags">
-            Blog
+          <a
+            href="#"
+            className="tags"
+            onClick={() => scrollToSection("projects")}
+          >
+            Projects
           </a>
-          <a href="#" className="tags">
+          <a href="#" className="tags" onClick={() => scrollToSection("About")}>
             About
           </a>
-          <a href="#" className="tags">
+          <a
+            href="#"
+            className="tags"
+            onClick={() => scrollToSection("contact")}
+          >
             Contact Us
           </a>
           <button className="header-btn-call">Schedule a Call</button>

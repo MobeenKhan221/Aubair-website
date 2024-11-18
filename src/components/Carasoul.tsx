@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import { Autoplay } from "swiper/modules";
 import Image from "next/image";
-import "@/style/Carasoul.css"; // Import your CSS
+import "@/style/carasoul.css";
 
 type Service = {
   id: string;

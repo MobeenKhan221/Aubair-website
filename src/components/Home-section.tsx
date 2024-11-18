@@ -45,12 +45,15 @@ export default function HomeSection() {
           </div>
 
           <div className="video-container">
-            <video autoPlay loop muted playsInline className="background-video">
-              <source
-                src="../../public/assets/videos/background.mp4"
-                type="video/mp4"
-              />
-            </video>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Jn5hsfbhWx4?autoplay=1&loop=1&mute=1&playlist=Jn5hsfbhWx4&controls=0&fs=0"
+              frameBorder="0"
+              allow="autoplay"
+              allowFullScreen={false}
+              className="background-video"
+            ></iframe>
           </div>
         </div>
         <div className="inner-2">

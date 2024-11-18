@@ -184,7 +184,7 @@ const ServiceSection = () => {
           {/* Flex Row (Visible on screens < 1440px) */}
           <FlexRowView
             services={services}
-            activeIndex={activeIndex}
+            // activeIndex={activeIndex}
             hoverIndex={hoverIndex}
             handleClick={handleClick}
             handleHoverStart={handleHoverStart}

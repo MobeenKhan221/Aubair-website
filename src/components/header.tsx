@@ -1,6 +1,7 @@
 "use client";
 import "@/style/header.css";
-import MainLogo from "@/assets/main logo.svg";
+
+import MainLogo from "@/assets/Aubair-logo-main.svg";
 import DropDownIcon from "@/assets/chevron-down.svg";
 import HamburgerIcon from "@/assets/menu-cion-hamburger.svg";
 import Image from "next/image";
@@ -48,7 +49,7 @@ export default function Header() {
           onClick={() => scrollToSection("home")}
           style={{ cursor: "pointer" }}
         >
-          <Image src={MainLogo} alt="Logo image" />
+          <Image src={MainLogo} alt="Logo image" className="aubair-logo-main" />
         </div>
 
         {/* Hamburger icon for mobile screens */}

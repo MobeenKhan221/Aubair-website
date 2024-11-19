@@ -20,6 +20,10 @@
 .Main-logo {
   display: flex;
   align-items: center;
+  width: 100px;
+}
+.Main-logo .aubair-logo-main {
+  width: 100%;
 }
 
 .tags-items {

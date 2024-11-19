@@ -403,4 +403,9 @@
     width: 80px;
     height: 30px;
   }
+  .counting-sec {
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+  }
 }

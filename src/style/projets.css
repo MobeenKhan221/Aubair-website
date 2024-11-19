@@ -139,6 +139,11 @@
   .projects-main {
     padding: 38px 60px;
   }
+  .projects-inner h1 {
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 75.6px;
+  }
   .image-text-inner,
   .image-text-inner-2 {
     flex-direction: column;
@@ -146,6 +151,7 @@
     justify-content: flex-start;
     gap: 20px;
   }
+
   .projects-text {
     width: 60%;
   }
@@ -153,6 +159,26 @@
 @media only screen and (max-width: 768px) {
   .projects-main {
     padding: 38px 30px;
+  }
+  .projects-inner h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 75.6px;
+  }
+  .projects-all {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .video-div {
+    height: auto;
+  }
+  .projects-text h2 {
+    font-size: 26px;
+  }
+  .projects-text p {
+    font-size: 16px;
   }
   .image-div {
     width: 100%;

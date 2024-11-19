@@ -7,10 +7,20 @@ import Image from "next/image";
 import { useState } from "react";
 
 const dropItems = [
-  { dropItem: "service1" },
-  { dropItem: "service1" },
-  { dropItem: "service1" },
+  { dropItem: "Website Development" },
+  { dropItem: "App Development" },
+  { dropItem: "Cloud Integration" },
+  { dropItem: "Database Design" },
+  { dropItem: "Fast API" },
+  { dropItem: "Rest API" },
+  { dropItem: "Check Bots" },
+  { dropItem: "Gen AI" },
+  { dropItem: "Jira" },
+  { dropItem: "Machine Learning" },
+  { dropItem: "Digital Marketing" },
+  { dropItem: "Business Intelligence" },
 ];
+
 export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isServicesMenuOpen, setServicesMenuOpen] = useState(false);
@@ -29,6 +39,7 @@ export default function Header() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <div className="header-main">
       <div className="header-inner">
@@ -61,16 +72,18 @@ export default function Header() {
             />
             {isServicesMenuOpen && (
               <div className="dropdown-menu">
-                {dropItems.map((dropdown, index) => (
-                  <a
-                    key={index}
-                    href="#"
-                    className="dropdown-item"
-                    onClick={() => scrollToSection("services")}
-                  >
-                    {dropdown.dropItem}
-                  </a>
-                ))}
+                <div className="grid-container">
+                  {dropItems.map((dropdown, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className="dropdown-item"
+                      onClick={() => scrollToSection("services")}
+                    >
+                      {dropdown.dropItem}
+                    </a>
+                  ))}
+                </div>
               </div>
             )}
           </div>

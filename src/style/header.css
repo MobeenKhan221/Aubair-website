@@ -1,3 +1,4 @@
+/* Header Main Styling */
 .header-main {
   width: 100%;
   display: flex;
@@ -5,6 +6,7 @@
   justify-content: center;
   padding: 38px 120px;
   position: relative;
+  background-color: #ffffff; /* Optional for clarity */
 }
 
 .header-inner {
@@ -32,6 +34,7 @@
   line-height: 20px;
   font-weight: 500;
   font-family: "Poppins";
+  cursor: pointer;
 }
 
 .drop-tags {
@@ -39,7 +42,6 @@
   align-items: center;
   gap: 4px;
   position: relative;
-  cursor: pointer;
 }
 
 .header-btn-call {
@@ -62,21 +64,19 @@
   display: none;
 }
 
+/* Dropdown Menu Styling */
 .dropdown-menu {
   /* position: fixed; */
   position: absolute;
-  top: 20px;
-  left: 0%;
-  background-color: rgb(255, 255, 255);
+  top: 25px; /* Adjust as needed */
+  left: 0; /* Adjust position relative to your layout */
+  background-color: #ffffff;
   box-shadow: 1px 5px 20px -6px gray;
   display: none;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 0.5rem 0;
+  padding: 1rem;
   z-index: 90099;
-  width: 100px;
+  width: 500px; /* Width of the dropdown */
   border-radius: 12px;
-  gap: 20px;
 }
 
 .drop-tags:hover .dropdown-menu,
@@ -89,25 +89,28 @@
   display: flex;
 }
 
+/* Grid Container for Dropdown Items */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 12px; /* Space between items */
+}
+
+/* Dropdown Items */
 .dropdown-item {
   padding: 0.5rem 1rem;
   color: #333;
   text-decoration: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
-
 .dropdown-item:hover {
-  background-color: #f5f5f5;
+  color: #8e2de2;
 }
 
-@media only screen and (max-width: 1440px) {
-  .header-main {
-    padding: 30px 80px;
-  }
-  .tags-items {
-    gap: 36px;
-  }
-}
-
+/* Mobile Menu Styling */
 @media only screen and (max-width: 1024px) {
   .header-main {
     padding: 38px 60px;
@@ -137,16 +140,46 @@
     width: 54px;
     height: 54px;
   }
+
   .hamburger-icon .HamIcon {
-    width: 100%;
+    width: 54px;
+    height: 54px;
   }
 }
 
+/* Mobile Dropdown Menu Adjustments */
 @media only screen and (max-width: 768px) {
   .header-main {
     padding: 38px 30px;
   }
-  .tags-items.active {
+  .hamburger-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .HamIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .hamburger-icon .HamIcon .tags-items.active {
     padding: 20px 30px;
+  }
+
+  .dropdown-menu {
+    width: 300px;
+    left: 0;
+    padding: 0;
+    box-shadow: none;
+    margin-left: -20px;
+  }
+
+  .grid-container {
+    grid-template-columns: 2, 1fr; /* Single column for small screens */
+    background-color: #fff;
+    /* width: 350px; */
+    grid-gap: 0px;
+  }
+  .dropdown-item {
+    font-size: 12px;
+    /* width: 100%; */
   }
 }

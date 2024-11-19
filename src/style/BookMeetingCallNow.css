@@ -1,0 +1,128 @@
+.bookmeeting-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 38px 120px;
+  border-radius: 10px;
+}
+.bookmeeting-inner {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.heading {
+  width: 90%;
+  font-family: "Montserrat";
+  font-size: 48px;
+  font-weight: 600;
+  /* margin-bottom: 1.5rem; */
+  color: #29292b;
+  text-align: start;
+}
+
+.highlight {
+  color: #8e2de2; /* Orange color */
+}
+
+.buttons-wrapper {
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Bookmeeting-a-tag {
+  width: 100%;
+}
+.meeting-button,
+.call-button {
+  width: 85%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  border-radius: 50px;
+  border: 1.5px solid #8e2de2;
+  padding: 0.7rem 2rem;
+  background-color: transparent;
+  font-family: "Montserrat";
+  color: #8e2de2;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: -1px;
+}
+
+.meeting-button:hover,
+.call-button:hover {
+  background-color: #8e2de2;
+  color: #fff;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.subtext {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #7f7f7f;
+}
+
+@media only screen and (max-width: 1440px) {
+  .bookmeeting-main {
+    padding: 38px 80px;
+  }
+  .heading {
+    width: 100%;
+    font-size: 38px;
+    font-weight: 600;
+  }
+  .buttons-wrapper {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .bookmeeting-main {
+    padding: 38px 60px;
+  }
+  .heading {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .buttons-wrapper {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bookmeeting-main {
+    padding: 38px 30px;
+  }
+  .heading {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .buttons-wrapper {
+    width: 100%;
+  }
+  .meeting-button,
+  .call-button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
